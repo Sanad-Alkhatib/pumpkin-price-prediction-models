@@ -96,7 +96,7 @@ LabelEncoder()
 
 ---
 
-Phase 4: Feature Engineering
+### Phase 4: Feature Engineering
 Average Price
 '''python
 data_encoded['Avg Price'] = (Low Price + High Price) / 2
