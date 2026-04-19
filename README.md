@@ -1,1 +1,2 @@
-# Comparative Performance Analysis of Multi-Model Classifiers for Pumpkin Price Prediction
+# Pumpkin Price Classification: A Comparative Study
+# Random Forest vs. SVM vs. KNN vs. Naive Bayes
