@@ -174,17 +174,8 @@ Displayed using bar plot:
 
 ---
 
-### Phase 8: Confusion Matrix
-Each model evaluated using:    
-'''python
-rf_tuned = RandomForestClassifier(
-    n_estimators=200,
-    max_depth=15,
-    min_samples_split=5,
-    min_samples_leaf=2,
-    random_state=42
-)
-'''    
+### Phase 8: Confusion Matrix  
+Each model is evaluated using a confusion matrix to analyze prediction performance.  
 
 Insights:
 - Shows correct vs incorrect predictions
@@ -250,7 +241,8 @@ Result:
 
 <img width="1001" height="530" alt="image" src="https://github.com/user-attachments/assets/dd040471-a7fd-4401-bb77-230394f26fcb" />
 
-
+# Key Insight  
+Although hyperparameter tuning significantly improved SVM and KNN performance, Random Forest remained the best-performing model even without tuning. This highlights the strength of ensemble methods in handling structured datasets.
 
 # Feature Importance Analysis:
 - Package (strongest predictor)
