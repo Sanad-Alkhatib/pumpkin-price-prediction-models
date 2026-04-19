@@ -248,7 +248,7 @@ Result:
 3. SVM (Tuned): 0.9204545454545454
 4. NB (Tuned): 0.53125
 
-<img width="1001" height="530" alt="image" src="https://github.com/user-attachments/assets/e31c55dc-80f2-48ef-a522-531d72a651d0" />
+<img width="1001" height="530" alt="image" src="https://github.com/user-attachments/assets/dd040471-a7fd-4401-bb77-230394f26fcb" />
 
 
 ### Key Insights
