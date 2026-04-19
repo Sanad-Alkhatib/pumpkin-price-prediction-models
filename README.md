@@ -241,7 +241,7 @@ Result:
 
 ### Key Insights
 
-# Most Important Features:
+# Feature Importance Analysis:
 - Package (strongest predictor)
 - Variety
 - City Name
@@ -267,8 +267,7 @@ This project demonstrates:
 - Effectiveness of hyperparameter tuning
 
 # Final Insight:
-Random Forest is the best performing model for pumpkin price classification in this dataset.
-
+Random Forest is the most reliable model for this dataset, providing the best balance between accuracy and generalization.
 
 
 
