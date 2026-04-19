@@ -98,13 +98,12 @@ LabelEncoder()
 ---
 
 ### Phase 4: Feature Engineering
-Average Price:
+# Average Price:
 '''python
 data_encoded['Avg Price'] = (Low Price + High Price) / 2
 '''
 
-Price Categorization
-Instead of regression → classification:
+# Price Categorization
 '''python
 Low / Medium / High (based on quantiles)
 '''
