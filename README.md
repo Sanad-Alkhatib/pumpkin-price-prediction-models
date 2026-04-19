@@ -8,7 +8,7 @@ This project focuses on classifying pumpkin prices into three categories:
 
 using multiple machine learning algorithms to compare performance and select the best model.
 
-- The project includes:
+### The project includes:
 - Data preprocessing
 - Feature engineering
 - Multiple ML models
