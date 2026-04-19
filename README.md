@@ -233,12 +233,45 @@ Result:
 - Slight stability improvement
 - accuracy_tuned = 0.53125
 
-### | Model         | Accuracy  | After Tuning       |
-| ------------- | --------- | ------------------ |
-| Random Forest | Highest | Improved             |
-| KNN           | High      | Improved           |
-| SVM          | Medium    |  Improved           |
-| Naive Bayes   | Lowest    | Slight improvement |
+### Final Results Summary
+1. Random Forest (Tuned): 0.9659
+2. KNN (Tuned): 0.9630681818181818
+3. SVM (Tuned): 0.9204545454545454
+4. NB (Tuned): 0.53125
+
+### Key Insights
+
+# Most Important Features:
+- Package (strongest predictor)
+- Variety
+- City Name
+- Item Size
+  
+# Observations:
+- Random Forest achieved the best overall performance, making it the most reliable model for this dataset.
+- KNN performed very closely to Random Forest, showing strong capability after tuning and scaling.
+- SVM delivered good results but was slightly behind tree-based and distance-based models, indicating moderate suitability for this dataset.
+- Naive Bayes showed significantly lower accuracy, suggesting that its probabilistic assumptions are not well-suited for this feature distribution.
+
+# Important Notes
+- Scaling is required for SVM and KNN
+- Feature engineering significantly improved performance
+- Hyperparameter tuning improved generalization
+
+# Final Conclusion
+
+This project demonstrates:
+- Strong comparison between 4 ML models
+- Importance of preprocessing & encoding
+- Impact of scaling on model performance
+- Effectiveness of hyperparameter tuning
+
+# Final Insight:
+Random Forest is the best performing model for pumpkin price classification in this dataset.
+
+
+
+
 
 
 
