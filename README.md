@@ -5,6 +5,7 @@ This project focuses on classifying pumpkin prices into three categories:
 - Low
 - Medium
 - High
+
 using multiple machine learning algorithms to compare performance and select the best model.
 
 - The project includes:
