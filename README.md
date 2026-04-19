@@ -1,5 +1,4 @@
 # Pumpkin Price Classification using Multiple Machine Learning Models
-# Random Forest vs. SVM vs. KNN vs. Naive Bayes
 
 ## Project Overview
 This project focuses on classifying pumpkin prices into three categories:
