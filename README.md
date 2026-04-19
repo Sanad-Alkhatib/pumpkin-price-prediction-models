@@ -43,20 +43,20 @@ We used multiple algorithms to:
 
 ### Dataset
 - Rows: 1757
-- Columns: 26 → cleaned to 17
-['City Name', 'Type', 'Package', 'Variety', 'Sub Variety', 'Date', 'Low Price', 'High Price', 'Mostly Low', 'Mostly High', 'Origin', 'Origin District', 'Item Size', 'Color', 'Unit of Sale', 'Repack', 'Unnamed: 25']
+- Columns: 26 → cleaned to 17  
+['City Name', 'Type', 'Package', 'Variety', 'Sub Variety', 'Date', 'Low Price', 'High Price', 'Mostly Low', 'Mostly High', 'Origin', 'Origin District', 'Item Size', 'Color', 'Unit of Sale', 'Repack', 'Unnamed: 25']  
 - This project uses the dataset from [Microsoft ML-For-Beginners](https://github.com/microsoft/ML-For-Beginners).
 
 ---
 
-### Phase 1: Data Exploration (EDA)
-
+### Phase 1: Data Exploration (EDA)  
 '''python
 print(df.head())
 print(df.dtypes)
 print(df.describe())
 print(df.isnull().sum())
 '''
+
 ### Why?
 - Understand structure
 - Detect missing values
@@ -66,7 +66,7 @@ print(df.isnull().sum())
 
 ### Phase 2: Data Cleaning
 
-### Remove empty columns
+### Remove empty columns  
 '''python
 data_cleaned = df.dropna(axis=1, how='all').copy()
 '''
@@ -87,7 +87,7 @@ Numerical
 
 ---
 
-### Phase 3: Encoding
+### Phase 3: Encoding  
 '''python
 LabelEncoder()
 '''
@@ -114,51 +114,53 @@ Low / Medium / High (based on quantiles)
 
 --- 
 
-### Phase 5: Train/Test Split
+### Phase 5: Train/Test Split  
 '''python
 train_test_split(test_size=0.2, random_state=42)
 '''
 
-### Why?
+### Why?  
 - 80% training / 20% testing
 - Ensures reproducibility
 
 ---
 ### Phase 6: Models Implementation
-1. Random Forest
+1. Random Forest  
 '''python
 RandomForestClassifier(random_state=42)
-'''
+'''  
 Strengths :
 - High accuracy
 - Reduces overfitting
 - Feature importance available
 
-2. SVM
+2. SVM  
 '''python
 SVC()
-'''
+'''  
 Important:
 - Requires scaling (StandardScaler used)
+  
 Strengths:
 - Strong decision boundaries
 - Good for complex data
 
-3. KNN
+3. KNN  
  '''python
 KNeighborsClassifier()
-'''
-Important:
+'''  
+
+Important:  
 - Requires scaling
-Strengths:
+Strengths:  
 - Simple logic
 - No training phase
 
-4. Naive Bayes
+4. Naive Bayes  
 '''python
 GaussianNB()
-'''
-Strengths:
+'''  
+Strengths:  
 - Fast
 - Works well with probabilistic data
 
@@ -173,7 +175,8 @@ Displayed using bar plot:
 ---
 
 ### Phase 8: Confusion Matrix
-Each model evaluated using:
+Each model evaluated using:    
+'''python
 rf_tuned = RandomForestClassifier(
     n_estimators=200,
     max_depth=15,
@@ -181,6 +184,8 @@ rf_tuned = RandomForestClassifier(
     min_samples_leaf=2,
     random_state=42
 )
+'''    
+
 Insights:
 - Shows correct vs incorrect predictions
 - Helps understand model confusion between classes
@@ -190,7 +195,7 @@ Insights:
 ---
 
 ### Phase 9: Hyperparameter Tuning
-1. Random Forest (Tuned)
+1. Random Forest (Tuned)  
 '''python
 rf_tuned = RandomForestClassifier(
     n_estimators=200,
@@ -199,36 +204,40 @@ rf_tuned = RandomForestClassifier(
     min_samples_leaf=2,
     random_state=42
 )
-'''
+'''  
+
 Result:
 - Improved generalization
 - Reduced overfitting
 - accuracy_tuned =  0.9659
 - 
 
-2. SVM (Tuned)
+2. SVM (Tuned)  
 '''python
 C=10, gamma=0.1
 '''
+
 Result:
 - Better margin control
 - Improved accuracy
 - accuracy_tuned = 0.9204545454545454
 
-4. KNN (Tuned)
+4. KNN (Tuned)  
 '''python
 n_neighbors=7
 weights='distance'
 '''
+
 Result:
 - Better neighbor weighting
 - More stable predictions
 - accuracy_tuned = 0.9630681818181818
 
-4. Naive Bayes (Tuned)
+4. Naive Bayes (Tuned)  
 '''python
 var_smoothing=1e-8
 '''
+
 Result:
 - Slight stability improvement
 - accuracy_tuned = 0.53125
@@ -258,15 +267,14 @@ Result:
 - Feature engineering significantly improved performance
 - Hyperparameter tuning improved generalization
 
-# Final Conclusion
-
+# Final Conclusion  
 This project demonstrates:
 - Strong comparison between 4 ML models
 - Importance of preprocessing & encoding
 - Impact of scaling on model performance
 - Effectiveness of hyperparameter tuning
 
-# Final Insight:
+# Final Insight:  
 Random Forest is the most reliable model for this dataset, providing the best balance between accuracy and generalization.
 
 
